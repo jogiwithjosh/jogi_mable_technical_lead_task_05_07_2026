@@ -4,7 +4,8 @@
 ## Grafana Dashboard
 - Deployment wasn't done. scripts can be found in the `api/docker/grafana` directory.
 
-## Walkthrough Video
+## Walkthrough Video - Sorry for the blurry video due to size limitations :smiley:
+
 <video controls src="https://ik.imagekit.io/jogiwithjosh/mable-walkthrough-small.mov" title="Walkthrough"></video>
 
-[![Walkthrough]([https://youtube.com](https://ik.imagekit.io/jogiwithjosh/mable-walkthrough-small.mov))]([https://youtube.com](https://ik.imagekit.io/jogiwithjosh/mable-walkthrough-small.mov))
+[https://ik.imagekit.io/jogiwithjosh/mable-walkthrough-small.mov](https://ik.imagekit.io/jogiwithjosh/mable-walkthrough-small.mov)
