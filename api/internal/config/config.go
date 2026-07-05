@@ -68,6 +68,7 @@ func Load() *Config {
 			Database: getString("CLICKHOUSE_DATABASE", "analytics"),
 			Username: getString("CLICKHOUSE_USERNAME", "default"),
 			Password: getString("CLICKHOUSE_PASSWORD", ""),
+			Secure:   getBool("CLICKHOUSE_SECURE", ""),
 		},
 		JWT: JWTConfig{
 			Secret: getString(
@@ -106,4 +107,8 @@ func getInt(key string, defaultValue int) int {
 	}
 
 	return number
+}
+
+func getBool(key string, defaultValue string) bool {
+	return os.Getenv(key) == "true"
 }
