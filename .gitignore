@@ -1,4 +1,4 @@
 vendor
 node_modules
-dist
+ecommerce/dist
 .idea

@@ -1,5 +1,5 @@
 {
-  "name": "@tracking-script",
+  "name": "@tracking-sdk",
   "version": "1.0.0",
   "description": "Standalone browser analytics SDK",
   "type": "module",

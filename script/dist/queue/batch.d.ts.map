@@ -1,0 +1,1 @@
+{"version":3,"file":"batch.d.ts","sourceRoot":"","sources":["../../src/queue/batch.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,aAAa,EAAE,MAAM,gBAAgB,CAAC;AAE/C,MAAM,WAAW,UAAU;IAEvB,MAAM,EAAE,aAAa,EAAE,CAAC;IAExB,SAAS,EAAE,MAAM,CAAC;CACrB;AAED,wBAAgB,WAAW,CACvB,MAAM,EAAE,aAAa,EAAE,GACxB,UAAU,CAQZ"}

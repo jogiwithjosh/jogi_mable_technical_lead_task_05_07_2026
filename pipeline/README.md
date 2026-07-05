@@ -85,7 +85,7 @@ this library targets high-throughput processing, compile time safety and perform
 MacBook M1 Pro
 8 CPU cores
 16 GB RAM
-GOMAXPROCS=10
+go version go1.26.3 darwin/arm64
 
 goos: darwin
 goarch: arm64

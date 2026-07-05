@@ -1,0 +1,1 @@
+{"version":3,"file":"userManager.d.ts","sourceRoot":"","sources":["../../src/user/userManager.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,IAAI,EAAE,MAAM,eAAe,CAAC;AAErC,qBAAa,WAAW;IAEpB,OAAO,CAAC,IAAI,CAAC,CAAO;IAEpB,QAAQ,CAAC,IAAI,EAAE,IAAI,GAAG,IAAI;IAI1B,OAAO,IAAI,IAAI,GAAG,SAAS;IAI3B,KAAK,IAAI,IAAI;IAIb,eAAe,IAAI,OAAO;CAG7B"}
