@@ -70,7 +70,7 @@ func Load() *Config {
 			Username:    getString("CLICKHOUSE_USERNAME", "default"),
 			Password:    getString("CLICKHOUSE_PASSWORD", ""),
 			Secure:      getBool("CLICKHOUSE_SECURE", ""),
-			DialTimeout: getInt("CLICKHOUSE_SECURE", 30),
+			DialTimeout: getInt("CLICKHOUSE_DIALTIMEOUT", 30),
 		},
 		JWT: JWTConfig{
 			Secret: getString(
