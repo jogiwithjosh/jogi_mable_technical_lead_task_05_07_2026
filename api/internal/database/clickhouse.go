@@ -18,7 +18,7 @@ type ClickHouse struct {
 
 func New(cfg config.ClickHouseConfig) (*ClickHouse, error) {
 	options := &clickhouse.Options{
-		Protocol: clickhouse.Native,
+
 		Addr: []string{
 			fmt.Sprintf("%s:%d", cfg.Host, cfg.Port),
 		},
@@ -38,6 +38,7 @@ func New(cfg config.ClickHouseConfig) (*ClickHouse, error) {
 	}
 
 	if cfg.Secure {
+		// options.Protocol = clickhouse.Native
 		options.TLS = &tls.Config{}
 	}
 
