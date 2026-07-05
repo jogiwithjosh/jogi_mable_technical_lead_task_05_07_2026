@@ -7,27 +7,14 @@ import {
     User
 } from "../types/auth";
 
+const BASE_URL = import.meta.env.VITE_API_URL ?? "http://localhost:8080";
+
 export async function login(
     request: LoginRequest
 ): Promise<LoginResponse> {
-
-    // -------------------------------------------------------
-    // Temporary mock for frontend development.
-    // Replace with the Api.post() call once the Go API is ready.
-    // -------------------------------------------------------
-
-    // const response: LoginResponse = {
-    //     token: "demo-token",
-    //     user: {
-    //         id: "1",
-    //         name: "Demo User",
-    //         email: request.email
-    //     }
-    // };
-
     
     const response = await Api.post<LoginResponse>(
-        "http://localhost:8080/uapi/login",
+        BASE_URL+"/uapi/login",
         request
     );
     
@@ -74,7 +61,7 @@ export async function signup(
 ) {
 
     const response = await Api.post<LoginResponse>(
-        "http://localhost:8080/uapi/signup",
+        BASE_URL+"/uapi/signup",
         request
     );
 
