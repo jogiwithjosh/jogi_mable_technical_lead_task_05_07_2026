@@ -17,19 +17,14 @@ func SetAuthCookie(
 	cfg config.JWTConfig,
 ) {
 	http.SetCookie(w, &http.Cookie{
-		Name:  AccessTokenCookie,
-		Value: token,
-		Path:  "/",
-
+		Name:     AccessTokenCookie,
+		Value:    token,
+		Path:     "/",
 		HttpOnly: true,
-
-		Secure: false, // localhost
-
-		SameSite: http.SameSiteLaxMode,
-
-		MaxAge: int(cfg.Expiry.Seconds()),
-
-		Expires: time.Now().Add(cfg.Expiry),
+		Secure:   true,
+		SameSite: http.SameSiteNoneMode,
+		MaxAge:   int(cfg.Expiry.Seconds()),
+		Expires:  time.Now().Add(cfg.Expiry),
 	})
 }
 
