@@ -29,7 +29,7 @@ func New(cfg config.ClickHouseConfig) (*ClickHouse, error) {
 			Password: cfg.Password,
 		},
 
-		DialTimeout: time.Second * 5,
+		DialTimeout: time.Second * time.Duration(cfg.DialTimeout),
 
 		MaxOpenConns: 20,
 		MaxIdleConns: 10,
@@ -46,7 +46,7 @@ func New(cfg config.ClickHouseConfig) (*ClickHouse, error) {
 
 	ctx, cancel := context.WithTimeout(
 		context.Background(),
-		5*time.Second,
+		time.Duration(cfg.DialTimeout)*time.Second,
 	)
 
 	fmt.Printf("%+v", options)

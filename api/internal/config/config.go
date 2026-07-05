@@ -33,12 +33,13 @@ type JWTConfig struct {
 }
 
 type ClickHouseConfig struct {
-	Host     string
-	Port     int
-	Database string
-	Username string
-	Password string
-	Secure   bool
+	Host        string
+	Port        int
+	Database    string
+	Username    string
+	Password    string
+	Secure      bool
+	DialTimeout int
 }
 
 type QueueConfig struct {
@@ -63,12 +64,13 @@ func Load() *Config {
 		AllowedOrigin: getString("ALLOWED_ORIGIN", "http://localhost:5173"),
 		JWTSecret:     getString("JWT_SECRET", "secret"),
 		ClickHouse: ClickHouseConfig{
-			Host:     getString("CLICKHOUSE_HOST", "clickhouse"),
-			Port:     getInt("CLICKHOUSE_PORT", 9000),
-			Database: getString("CLICKHOUSE_DATABASE", "analytics"),
-			Username: getString("CLICKHOUSE_USERNAME", "default"),
-			Password: getString("CLICKHOUSE_PASSWORD", ""),
-			Secure:   getBool("CLICKHOUSE_SECURE", ""),
+			Host:        getString("CLICKHOUSE_HOST", "clickhouse"),
+			Port:        getInt("CLICKHOUSE_PORT", 9000),
+			Database:    getString("CLICKHOUSE_DATABASE", "analytics"),
+			Username:    getString("CLICKHOUSE_USERNAME", "default"),
+			Password:    getString("CLICKHOUSE_PASSWORD", ""),
+			Secure:      getBool("CLICKHOUSE_SECURE", ""),
+			DialTimeout: getInt("CLICKHOUSE_SECURE", 30),
 		},
 		JWT: JWTConfig{
 			Secret: getString(
