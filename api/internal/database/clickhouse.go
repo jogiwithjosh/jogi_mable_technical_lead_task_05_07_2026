@@ -2,6 +2,7 @@ package database
 
 import (
 	"context"
+	"crypto/tls"
 	"database/sql"
 	"fmt"
 	"time"
@@ -17,6 +18,7 @@ type ClickHouse struct {
 
 func New(cfg config.ClickHouseConfig) (*ClickHouse, error) {
 	options := &clickhouse.Options{
+		Protocol: clickhouse.Native,
 		Addr: []string{
 			fmt.Sprintf("%s:%d", cfg.Host, cfg.Port),
 		},
@@ -33,6 +35,10 @@ func New(cfg config.ClickHouseConfig) (*ClickHouse, error) {
 		MaxIdleConns: 10,
 
 		ConnMaxLifetime: time.Hour,
+	}
+
+	if cfg.Secure {
+		options.TLS = &tls.Config{}
 	}
 
 	conn := clickhouse.OpenDB(options)

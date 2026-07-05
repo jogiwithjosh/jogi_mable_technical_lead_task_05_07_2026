@@ -38,6 +38,7 @@ type ClickHouseConfig struct {
 	Database string
 	Username string
 	Password string
+	Secure   bool
 }
 
 type QueueConfig struct {
