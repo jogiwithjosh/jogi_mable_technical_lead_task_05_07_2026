@@ -1,0 +1,14 @@
+{
+  "id":"1",
+  "type":"click",
+  "timestamp":"2026-07-01T10:00:00Z",
+  "page":"/products",
+  "url":"http://localhost/products",
+  "userId":"123",
+  "anonymousId":"456",
+  "sessionId":"789",
+  "properties":{
+    "x":100,
+    "y":200
+  }
+}
